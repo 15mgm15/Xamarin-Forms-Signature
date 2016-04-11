@@ -1,0 +1,28 @@
+﻿<Properties StartupItem="Droid/Signature.Droid.csproj" RefactoringSettings.EnableRefactorings="True">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="Android.Nexus" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Signature/PageRenderer/SignaturePage.cs">
+    <Files>
+      <File FileName="Signature/SignaturePage.cs" Line="20" Column="6" />
+      <File FileName="iOS/ImageWithTouchRenderer.cs" Line="57" Column="3" />
+      <File FileName="iOS/DrawView.cs" Line="111" Column="5" />
+      <File FileName="Signature/ImageHelper.cs" Line="10" Column="23" />
+      <File FileName="Droid/ImageWithTouchRenderer.cs" Line="68" Column="2" />
+      <File FileName="Signature/PageRenderer/SignaturePage.cs" Line="6" Column="42" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Signature" expanded="True">
+            <Node name="Signature" expanded="True">
+              <Node name="PageRenderer" expanded="True" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
