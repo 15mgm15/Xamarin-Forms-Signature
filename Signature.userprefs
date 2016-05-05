@@ -1,5 +1,5 @@
 ﻿<Properties StartupItem="Droid/Signature.Droid.csproj" RefactoringSettings.EnableRefactorings="True">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="Android.Nexus" />
+  <MonoDevelop.Ide.ItemProperties.Signature.Droid PreferredExecutionTarget="Android.Nexus 5 (Lollipop)" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Signature/PageRenderer/SignaturePage.cs">
     <Files>
       <File FileName="Signature/SignaturePage.cs" Line="20" Column="6" />
@@ -21,8 +21,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Signature.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.68CE4DA4-012A-47A2-968B-BC7277248627" />
 </Properties>

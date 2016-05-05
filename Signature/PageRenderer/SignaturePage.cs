@@ -3,9 +3,9 @@ using Xamarin.Forms;
 
 namespace Signature
 {
-	public class SignaturePage : ContentPage
+	public class SignaturePageRenderer : ContentPage
 	{
-		public SignaturePage ()
+		public SignaturePageRenderer ()
 		{
 		}
 	}

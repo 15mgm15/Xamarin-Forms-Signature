@@ -1,12 +1,10 @@
-using System;
 using Xamarin.Forms;
 
 namespace Signature
 {
 	public class SignaturePage  : ContentPage
 	{
-		private ImageWithTouch DrawingImage;
-
+		ImageWithTouch DrawingImage;
 
 		public SignaturePage()
 		{
@@ -105,7 +103,7 @@ namespace Signature
 			DrawingImage.CurrentLineColor = Color.Black;
 		}
 
-		private View BuildDrawingFrame()
+		View BuildDrawingFrame()
 		{
 			DrawingImage = new ImageWithTouch
 			{
