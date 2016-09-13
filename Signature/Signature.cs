@@ -9,7 +9,7 @@ namespace Signature
 		public App ()
 		{
 			// The root page of your application
-			MainPage = new SignaturePage();
+			MainPage = new NavigationPage(new TestPage());
 		}
 
 		protected override void OnStart ()

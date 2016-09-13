@@ -14,6 +14,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)ImageWithTouch.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ImageHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PageRenderer\SignaturePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SignatureImagePage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)PageRenderer\" />
