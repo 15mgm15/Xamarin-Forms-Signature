@@ -1,21 +1,29 @@
-﻿<Properties StartupItem="iOS/Signature.iOS.csproj" RefactoringSettings.EnableRefactorings="True">
+﻿<Properties RefactoringSettings.EnableRefactorings="True" StartupConfiguration="{A42492D3-AD37-4E64-825C-29AD7D2F8E12}|Default">
   <MonoDevelop.Ide.ItemProperties.Signature.Droid PreferredExecutionTarget="Android.Nexus 5 (Lollipop)" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Signature/TestPage.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Signature/TestXamlPage.xaml.cs">
     <Files>
       <File FileName="Signature/SignaturePage.cs" Line="103" Column="48" />
       <File FileName="iOS/ImageWithTouchRenderer.cs" Line="57" Column="3" />
       <File FileName="iOS/DrawView.cs" Line="111" Column="5" />
       <File FileName="Signature/ImageHelper.cs" Line="10" Column="23" />
       <File FileName="Droid/ImageWithTouchRenderer.cs" Line="68" Column="2" />
-      <File FileName="Signature/TestPage.cs" Line="27" Column="3" />
-      <File FileName="Signature/Signature.cs" Line="12" Column="27" />
+      <File FileName="Signature/TestXamlPage.xaml.cs" Line="15" Column="53" />
+      <File FileName="Signature/TestPage.cs" Line="11" Column="18" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Signature" expanded="True">
             <Node name="Signature" expanded="True">
-              <Node name="TestPage.cs" selected="True" />
+              <Node name="TestXamlPage.xaml" expanded="True">
+                <Node name="TestXamlPage.xaml.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="Signature.Droid" expanded="True">
+              <Node name="Packages" expanded="True" />
+            </Node>
+            <Node name="Signature.iOS" expanded="True">
+              <Node name="Packages" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -27,5 +35,5 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Signature.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.37F5F705-DAF7-420C-9B5B-7EA2E1C1B96C" />
+  <MonoDevelop.Ide.ItemProperties.Signature.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.980E101D-4372-4252-A2C5-DE3A4EA07C4F" />
 </Properties>

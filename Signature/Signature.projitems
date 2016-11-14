@@ -16,8 +16,16 @@
     <Compile Include="$(MSBuildThisFileDirectory)PageRenderer\SignaturePage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TestPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SignatureImagePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestXamlPage.xaml.cs">
+      <DependentUpon>TestXamlPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)PageRenderer\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)TestXamlPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

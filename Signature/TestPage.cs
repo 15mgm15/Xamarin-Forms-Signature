@@ -8,7 +8,7 @@ namespace Signature
 	{
 		public TestPage()
 		{
-			ImageWithTouch DrawingImage = new ImageWithTouch
+			ImageWithTouch drawingImage = new ImageWithTouch
 			{
 				VerticalOptions = LayoutOptions.FillAndExpand,
 				HorizontalOptions = LayoutOptions.FillAndExpand,
@@ -27,25 +27,35 @@ namespace Signature
 				IsEnabled = false
 			};
 
+			Button clearTheImageBtn = new Button
+			{
+				Text = "Clear",
+			};
+
 			saveImageBtn.Clicked += (sender, e) =>
 			{
 				string savedFileName = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/temp_" + DateTime.Now.ToString("yyyy_mm_dd_hh_mm_ss") + ".jpg";
 				//If this property is set the Image is stored in the folder path.
-				DrawingImage.SavedImagePath = savedFileName;
+				drawingImage.SavedImagePath = savedFileName;
 				seeTheImageBtn.IsEnabled = true;
 			};
 
 			seeTheImageBtn.Clicked += (sender, e) =>
 			{
-				Navigation.PushAsync(new SignatureImagePage(DrawingImage.SavedImagePath));
+				Navigation.PushAsync(new SignatureImagePage(drawingImage.SavedImagePath));
 			};
 
-			DrawingImage.CurrentLineWidth = 5;
-			DrawingImage.CurrentLineColor = Color.Black;
+			clearTheImageBtn.Clicked += (sender, e) =>
+			{
+				drawingImage.ClearPath = !drawingImage.ClearPath;
+			};
+
+			drawingImage.CurrentLineWidth = 5;
+			drawingImage.CurrentLineColor = Color.Black;
 
 			Content = new StackLayout
 			{
-				Children = { DrawingImage, saveImageBtn, seeTheImageBtn }
+				Children = { drawingImage, saveImageBtn, seeTheImageBtn, clearTheImageBtn }
 			};
 		}
 	}

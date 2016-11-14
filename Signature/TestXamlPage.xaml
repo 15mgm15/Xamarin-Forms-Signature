@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="Signature.TestXamlPage"
+		xmlns:customControls="clr-namespace:Signature"
+		Title="Signature XAML Test">
+	<ContentPage.Content>
+		<StackLayout>
+			<customControls:ImageWithTouch
+					x:Name="drawingImage"
+					VerticalOptions="FillAndExpand"
+					HorizontalOptions="FillAndExpand"
+					BackgroundColor="Transparent"
+					CurrentLineColor="Black"
+			/>
+			<Button 
+				x:Name="saveImageBtn" 
+				Text="Save the Image"
+				/>
+			<Button 
+				x:Name="seeTheImageBtn" 
+				Text="See the Image" 
+				IsEnabled="false"
+				/>
+			<Button 
+				x:Name="clearTheImageBtn" 
+				Text="Clear"
+				/>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

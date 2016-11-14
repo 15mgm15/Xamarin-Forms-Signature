@@ -8,8 +8,11 @@ namespace Signature
 	{
 		public App ()
 		{
-			// The root page of your application
-			MainPage = new NavigationPage(new TestPage());
+			//If you want to use the code behind test page
+			//MainPage = new NavigationPage(new TestPage());
+
+			//If you want to use the XAML test page
+			MainPage = new NavigationPage(new TestXamlPage());
 		}
 
 		protected override void OnStart ()
