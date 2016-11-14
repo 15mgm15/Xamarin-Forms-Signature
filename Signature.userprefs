@@ -1,5 +1,5 @@
-﻿<Properties RefactoringSettings.EnableRefactorings="True" StartupConfiguration="{A42492D3-AD37-4E64-825C-29AD7D2F8E12}|Default">
-  <MonoDevelop.Ide.ItemProperties.Signature.Droid PreferredExecutionTarget="Android.Nexus 5 (Lollipop)" />
+﻿<Properties RefactoringSettings.EnableRefactorings="True" StartupConfiguration="{AC26BFC8-1DFD-4026-B3EC-2D22B5328117}|Default">
+  <MonoDevelop.Ide.ItemProperties.Signature.Droid PreferredExecutionTarget="Android.192.168.57.101:5555" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Signature/TestXamlPage.xaml.cs">
     <Files>
       <File FileName="Signature/SignaturePage.cs" Line="103" Column="48" />

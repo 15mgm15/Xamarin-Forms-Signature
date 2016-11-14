@@ -4,6 +4,7 @@
 		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 		x:Class="Signature.TestXamlPage"
 		xmlns:customControls="clr-namespace:Signature"
+		BackgroundColor="White"
 		Title="Signature XAML Test">
 	<ContentPage.Content>
 		<StackLayout>
