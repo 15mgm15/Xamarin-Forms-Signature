@@ -25,7 +25,7 @@ namespace Signature.Droid
 		private Bitmap CanvasBitmap;
 
 		private int w, h;
-		private Bitmap _image = null;
+		private Bitmap _image;
 
 		private void Start()
 		{
@@ -57,10 +57,23 @@ namespace Signature.Droid
 				DrawPath = new Path();
 				CanvasBitmap = Bitmap.CreateBitmap(w, h, Bitmap.Config.Argb8888);
 				DrawCanvas = new Canvas(CanvasBitmap);
+
+				DrawCanvas.DrawColor(Color.White, PorterDuff.Mode.Multiply);
+				CanvasBitmap.EraseColor(Color.Transparent);
+				DrawPaint = new Paint
+				{
+					Color = CurrentLineColor,
+					AntiAlias = true,
+					StrokeWidth = PenWidth
+				};
+
+				DrawPaint.SetStyle(Paint.Style.Stroke);
+				DrawPaint.StrokeJoin = Paint.Join.Round;
+				DrawPaint.StrokeCap = Paint.Cap.Round;
 			}
 			catch (Exception e)
 			{
-
+				Console.WriteLine(e.Message);
 			}
 
 			Invalidate();
@@ -80,7 +93,7 @@ namespace Signature.Droid
 				}
 				catch(Exception ex)
 				{
-					
+					Console.WriteLine(ex.Message);
 				}
 			}
 		}
@@ -180,7 +193,7 @@ namespace Signature.Droid
 			}
 			catch (Exception ex)
 			{
-				
+				Console.WriteLine(ex.Message);
 			}
 
 			return tempBitmap;

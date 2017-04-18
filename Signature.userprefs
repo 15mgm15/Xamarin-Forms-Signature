@@ -1,39 +1,18 @@
 ﻿<Properties RefactoringSettings.EnableRefactorings="True" StartupConfiguration="{AC26BFC8-1DFD-4026-B3EC-2D22B5328117}|Default">
-  <MonoDevelop.Ide.ItemProperties.Signature.Droid PreferredExecutionTarget="Android.192.168.57.101:5555" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Signature/TestXamlPage.xaml.cs">
+  <MonoDevelop.Ide.ItemProperties.Signature.Droid PreferredExecutionTarget="Android.ZY223LRPRK" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/ImageWithTouchRenderer.cs">
     <Files>
-      <File FileName="Signature/SignaturePage.cs" Line="103" Column="48" />
-      <File FileName="iOS/ImageWithTouchRenderer.cs" Line="57" Column="3" />
-      <File FileName="iOS/DrawView.cs" Line="111" Column="5" />
-      <File FileName="Signature/ImageHelper.cs" Line="10" Column="23" />
-      <File FileName="Droid/ImageWithTouchRenderer.cs" Line="68" Column="2" />
-      <File FileName="Signature/TestXamlPage.xaml.cs" Line="15" Column="53" />
-      <File FileName="Signature/TestPage.cs" Line="11" Column="18" />
+      <File FileName="Signature/TestXamlPage.xaml.cs" Line="34" Column="46" />
+      <File FileName="Signature/ImageWithTouch.cs" Line="17" Column="65" />
+      <File FileName="Droid/DrawView.cs" Line="53" Column="20" />
+      <File FileName="Droid/ImageWithTouchRenderer.cs" Line="31" Column="63" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Signature" expanded="True">
-            <Node name="Signature" expanded="True">
-              <Node name="TestXamlPage.xaml" expanded="True">
-                <Node name="TestXamlPage.xaml.cs" selected="True" />
-              </Node>
-            </Node>
-            <Node name="Signature.Droid" expanded="True">
-              <Node name="Packages" expanded="True" />
-            </Node>
-            <Node name="Signature.iOS" expanded="True">
-              <Node name="Packages" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Signature.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.980E101D-4372-4252-A2C5-DE3A4EA07C4F" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Signature.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.ECF9B051-32C5-42D6-9746-1741D58BE540" />
 </Properties>
