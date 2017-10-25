@@ -1,4 +1,3 @@
-using System;
 using Xamarin.Forms;
 
 namespace Signature

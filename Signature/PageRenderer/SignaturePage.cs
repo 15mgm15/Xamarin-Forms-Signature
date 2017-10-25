@@ -1,5 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace Signature
 {
@@ -7,6 +6,7 @@ namespace Signature
 	{
 		public SignaturePageRenderer ()
 		{
+            
 		}
 	}
 }

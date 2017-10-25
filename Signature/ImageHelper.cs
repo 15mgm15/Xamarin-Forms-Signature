@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Drawing;
 #if __IOS__
 using Foundation;
 #endif
@@ -18,55 +15,51 @@ using CoreGraphics;
 
 namespace Signature
 {
-	public class ImageHelper
+	public static class ImageHelper
 	{
 		#if __ANDROID__
-		public static byte[] BitmapToBytes(Android.Graphics.Bitmap bitmap)
+		public static byte[] BitmapToBytes(Bitmap bitmap)
 		{
-		byte[] data = new byte[0];
-		using (System.IO.MemoryStream stream = new System.IO.MemoryStream())
-		{
-		bitmap.Compress(Android.Graphics.Bitmap.CompressFormat.Jpeg, 90, stream);
-		stream.Close();
-		data = stream.ToArray();
-		}
-		return data;
-		}
-
-		public static int CalculateInSampleSize(Android.Graphics.BitmapFactory.Options options, int reqWidth, int reqHeight)
-		{
-		// Raw height and width of image
-		var height = (float)options.OutHeight;
-		var width = (float)options.OutWidth;
-		var inSampleSize = 1D;
-
-		if (height > reqHeight || width > reqWidth)
-		{
-		inSampleSize = width > height
-		? height / reqHeight
-		: width / reqWidth;
+    		byte[] data = new byte[0];
+    		using (System.IO.MemoryStream stream = new System.IO.MemoryStream())
+    		{
+        		bitmap.Compress(Bitmap.CompressFormat.Jpeg, 90, stream);
+        		stream.Close();
+        		data = stream.ToArray();
+    		}
+    		return data;
 		}
 
-		return (int)inSampleSize;
+		public static int CalculateInSampleSize(BitmapFactory.Options options, int reqWidth, int reqHeight)
+		{
+    		// Raw height and width of image
+    		var height = (float)options.OutHeight;
+    		var width = (float)options.OutWidth;
+    		var inSampleSize = 1D;
+
+    		if (height > reqHeight || width > reqWidth)
+    		{
+    		    inSampleSize = width > height ? height / reqHeight : width / reqWidth;
+    		}
+
+    		return (int)inSampleSize;
 		}
 
-		public static Android.Graphics.Bitmap DecodeSampledBitmapFromResource(String filename, int reqWidth, int reqHeight)
+		public static Bitmap DecodeSampledBitmapFromResource(String filename, int reqWidth, int reqHeight)
 		{
-		// First decode with inJustDecodeBounds=true to check dimensions
-		var options = new Android.Graphics.BitmapFactory.Options
-		{
-		InJustDecodeBounds = true,
-		};
-		using (var dispose = Android.Graphics.BitmapFactory.DecodeFile(filename, options))
-		{
-		}
+    		// First decode with inJustDecodeBounds=true to check dimensions
+    		var options = new BitmapFactory.Options
+    		{
+    		    InJustDecodeBounds = true,
+    		};
+    		using (var dispose = BitmapFactory.DecodeFile(filename, options)){}
 
-		// Calculate inSampleSize
-		options.InSampleSize = CalculateInSampleSize(options, reqWidth, reqHeight);
+    		// Calculate inSampleSize
+    		options.InSampleSize = CalculateInSampleSize(options, reqWidth, reqHeight);
 
-		// Decode bitmap with inSampleSize set
-		options.InJustDecodeBounds = false;
-		return Android.Graphics.BitmapFactory.DecodeFile(filename, options);
+    		// Decode bitmap with inSampleSize set
+    		options.InJustDecodeBounds = false;
+    		return BitmapFactory.DecodeFile(filename, options);
 		}
 
 		/**
@@ -75,24 +68,20 @@ namespace Signature
 		* @param selectedImage
 		* @return 
 		*/
-		public static Bitmap rotateImageIfRequired(Android.Content.Context context, Bitmap img, Uri selectedImage)
+		public static Bitmap rotateImageIfRequired(Context context, Bitmap img, Uri selectedImage)
 		{
-
-		// Detect rotation
-		int rotation = getRotation(context, selectedImage);
-		if (rotation != 0)
-		{
-		Matrix matrix = new Matrix();
-		matrix.PostRotate(rotation);
-		Bitmap rotatedImg = Bitmap.CreateBitmap(img, 0, 0, img.Width, img.Height, matrix, true);
-		img.Recycle();
-		return rotatedImg;
-		}
-		else
-		{
-		return img;
-		}
-		}
+    		// Detect rotation
+    		int rotation = getRotation(context, selectedImage);
+            if (rotation != 0)
+            {
+                Matrix matrix = new Matrix();
+                matrix.PostRotate(rotation);
+                Bitmap rotatedImg = Bitmap.CreateBitmap(img, 0, 0, img.Width, img.Height, matrix, true);
+                img.Recycle();
+                return rotatedImg;
+            }
+            return img;
+        }
 
 		/**
 		* Get the rotation of the last image added.
@@ -100,25 +89,24 @@ namespace Signature
 		* @param selectedImage
 		* @return
 		*/
-		private static int getRotation(Android.Content.Context context, Uri selectedImage)
+		static int getRotation(Context context, Uri selectedImage)
 		{
-		int rotation = 0;
-		ContentResolver content = context.ContentResolver;
+    		int rotation = 0;
+    		ContentResolver content = context.ContentResolver;
 
+    		ICursor mediaCursor = content.Query(MediaStore.Images.Media.ExternalContentUri,
+    		new String[] { "orientation", "date_added" }, null, null, "date_added desc");
 
-		ICursor mediaCursor = content.Query(MediaStore.Images.Media.ExternalContentUri,
-		new String[] { "orientation", "date_added" }, null, null, "date_added desc");
-
-		if (mediaCursor != null && mediaCursor.Count != 0)
-		{
-		while (mediaCursor.MoveToNext())
-		{
-		rotation = mediaCursor.GetInt(0);
-		break;
-		}
-		}
-		mediaCursor.Close();
-		return rotation;
+    		if (mediaCursor != null && mediaCursor.Count != 0)
+    		{
+        		while (mediaCursor.MoveToNext())
+        		{
+            		rotation = mediaCursor.GetInt(0);
+            		break;
+        		}
+    		}
+    		mediaCursor.Close();
+    		return rotation;
 		}
 
 		#elif __IOS__
@@ -190,10 +178,7 @@ namespace Signature
 				transform.Translate(0.0f, imageSize.Width);
 				break;
 
-			default:
-				break;
-
-			}
+            }
 
 			UIGraphics.BeginImageContext (bounds.Size);
 

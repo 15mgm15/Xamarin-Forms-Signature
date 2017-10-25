@@ -1,11 +1,8 @@
 ﻿<Properties RefactoringSettings.EnableRefactorings="True" StartupConfiguration="{AC26BFC8-1DFD-4026-B3EC-2D22B5328117}|Default">
-  <MonoDevelop.Ide.ItemProperties.Signature.Droid PreferredExecutionTarget="Android.ZY223LRPRK" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/ImageWithTouchRenderer.cs">
+  <MonoDevelop.Ide.ItemProperties.Signature.Droid PreferredExecutionTarget="Android.Nexus6" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Signature/ImageHelper.cs">
     <Files>
-      <File FileName="Signature/TestXamlPage.xaml.cs" Line="34" Column="46" />
-      <File FileName="Signature/ImageWithTouch.cs" Line="17" Column="65" />
-      <File FileName="Droid/DrawView.cs" Line="53" Column="20" />
-      <File FileName="Droid/ImageWithTouchRenderer.cs" Line="31" Column="63" />
+      <File FileName="Signature/ImageHelper.cs" Line="75" Column="7" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -14,5 +11,5 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Signature.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.ECF9B051-32C5-42D6-9746-1741D58BE540" />
+  <MonoDevelop.Ide.ItemProperties.Signature.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.51CF9593-913D-4D62-968B-C096B778A62E" />
 </Properties>

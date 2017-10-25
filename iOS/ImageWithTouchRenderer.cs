@@ -39,7 +39,7 @@ namespace Signature.iOS
 			}
 		}
 
-		private void UpdateControl(bool bDisplayFlag)
+		void UpdateControl(bool bDisplayFlag)
 		{
 			Control.CurrentLineColor = Element.CurrentLineColor.ToUIColor();
 			Control.PenWidth = Element.CurrentLineWidth;

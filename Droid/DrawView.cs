@@ -18,16 +18,16 @@ namespace Signature.Droid
 
 		public float PenWidth { get; set; }
 
-		private Path DrawPath;
-		private Paint DrawPaint;
-		private Paint CanvasPaint;
-		private Canvas DrawCanvas;
-		private Bitmap CanvasBitmap;
+		Path DrawPath;
+		Paint DrawPaint;
+		Paint CanvasPaint;
+		Canvas DrawCanvas;
+		Bitmap CanvasBitmap;
 
-		private int w, h;
-		private Bitmap _image;
+		int w, h;
+		Bitmap _image;
 
-		private void Start()
+		void Start()
 		{
 			CurrentLineColor = Color.Black;
 			PenWidth = 5.0f;

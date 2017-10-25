@@ -13,21 +13,17 @@
 					VerticalOptions="FillAndExpand"
 					HorizontalOptions="FillAndExpand"
 					BackgroundColor="Transparent"
-					CurrentLineColor="Black"
-			/>
+					CurrentLineColor="Black"/>
 			<Button 
 				x:Name="saveImageBtn" 
-				Text="Save the Image"
-				/>
+				Text="Save the Image"/>
 			<Button 
 				x:Name="seeTheImageBtn" 
 				Text="See the Image" 
-				IsEnabled="false"
-				/>
+				IsEnabled="false"/>
 			<Button 
 				x:Name="clearTheImageBtn" 
-				Text="Clear"
-				/>
+				Text="Clear"/>
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

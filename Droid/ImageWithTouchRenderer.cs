@@ -4,7 +4,6 @@ using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms;
 using Android.Graphics;
 using Java.IO;
-using System.IO;
 using Signature;
 using Signature.Droid;
 
@@ -37,7 +36,7 @@ namespace Signature.Droid
 				Bitmap curDrawingImage = Control.GetImageFromView();
 
 				Byte[] imgBytes = ImageHelper.BitmapToBytes(curDrawingImage);
-				Java.IO.File f = new Java.IO.File(Element.SavedImagePath);
+				File f = new File(Element.SavedImagePath);
 
 				f.CreateNewFile();
 
@@ -52,7 +51,7 @@ namespace Signature.Droid
 			}
 		}
 
-		private void UpdateControl(bool bDisplayFlag)
+		void UpdateControl(bool bDisplayFlag)
 		{
 			Control.CurrentLineColor = Element.CurrentLineColor.ToAndroid();
 			Control.PenWidth = Element.CurrentLineWidth * 3;

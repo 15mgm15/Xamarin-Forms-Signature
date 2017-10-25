@@ -17,17 +17,17 @@ namespace Signature.iOS
 			Lines = new List<VESLine> ();
 		}
 
-		private PointF PreviousPoint;
-		private CGPath DrawPath;
-		private byte IndexCount;
-		private UIBezierPath CurrentPath;
-		private List<VESLine> Lines;
+		PointF PreviousPoint;
+		CGPath DrawPath;
+		byte IndexCount;
+		UIBezierPath CurrentPath;
+		List<VESLine> Lines;
 
 		public UIColor CurrentLineColor { get; set; }
 		public String ImageFilePath { get; set; }
 		public float PenWidth { get; set; }
 
-		private UIImage _image = null;
+		UIImage _image;
 
 		public void Clear ()
 		{
@@ -120,8 +120,11 @@ namespace Signature.iOS
 
 			CGContext context = UIGraphics.GetCurrentContext ();
 			if (_image != null)
-				context.DrawImage (Frame, _image.CGImage);
-			this.Layer.RenderInContext (context);
+            {
+                context.DrawImage(Frame, _image.CGImage);
+            }
+				
+			Layer.RenderInContext (context);
 
 			UIImage image = UIGraphics.GetImageFromCurrentImageContext();
 
