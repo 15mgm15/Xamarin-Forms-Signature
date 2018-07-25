@@ -43,6 +43,8 @@ namespace Signature.iOS
 
 			var path = new UIBezierPath
 			{
+				LineJoinStyle = CGLineJoin.Round,
+                		LineCapStyle = CGLineCap.Round,
 				LineWidth = PenWidth
 			};
 
